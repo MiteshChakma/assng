@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WT Task Project</title>
+</head>
+<body>
+
+<h1>
+    WT Task Project
+</h1>
+
+<hr>
+<nav>
+    <ul>
+        <li> <a href=""> Home</a> </li>
+        <li> <a href="{{ url_for('show_all') }}"> Show Student list</a> </li>
+        <li> <a href="{{ url_for('add_course_details') }}"> Add Course details</a> </li>
+        <li> <a href="{{ url_for('add_student_details') }}"> Add student details</a> </li>
+        <li> <a href="{{ url_for('enroll_students') }}"> Enroll student</a> </li>
+        <li> <a href="{{ url_for('search') }}"> Search student</a> </li>
+
+    </ul>
+</nav>
+
+</body>
+</html>

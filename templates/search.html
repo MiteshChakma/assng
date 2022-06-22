@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> WT Task Project</title>
+</head>
+<body>
+
+<div class = 'container'>
+    <div align ='center'><form method="post" action='/search'> search
+        <input type='text' name='search_field'>
+        <input type="radio" id="student" name="search" value="student" checked="checked">  <label for="student" >Search by Student Id (Integer only)</label><br>
+        <input type="radio" id="course" name="search" value="course">  <label for="course">Search by Course Id</label><br>
+        <input type='submit'>
+    </form>
+    </div>
+<p>Table for Course enrollement list</p>
+     <table>
+         <thead>
+            <tr>
+                <th>Course name </th>
+                <th>Course id</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for course in courses %}
+               <tr>
+                  <td>{{ course.cname }}</td>
+                  <td>{{ course.cnumber }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+<hr>
+<p>Table for Student list</p>
+ <table>
+         <thead>
+            <tr>
+                <th>Student name </th>
+                <th>Student email</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for student in students %}
+               <tr>
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.email }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+</div>
+</body>
+</html>

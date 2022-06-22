@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WT Task Project</title>
+</head>
+<body>
+
+<h1>
+    WT Task Project
+</h1>
+
+<hr>
+<h3>Add Student details</h3>
+
+<form action = "{{ request.path }}" method = "post">
+         <label for = "name">Full Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+
+         <label for = "age">Age</label><br>
+         <input type = "date" name = "age" placeholder = "age" /><br>
+
+         <label for = "email">Email</label><br>
+         <input type = "email" name = "email" placeholder = "email" /><br>
+
+         <label for = "city">City</label><br>
+         <input type = "text" name = "city" placeholder = "city" /><br>
+
+         <label for = "addr">Address</label><br>
+         <input type = "text"  name = "addr" placeholder = "addr"></input><br>
+
+         <input type = "submit" value = "Submit" />
+         <input type = "reset" value = "Reset" />
+</form>
+</body>
+</html>

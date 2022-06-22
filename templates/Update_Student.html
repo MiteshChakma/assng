@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WT Task Project</title>
+</head>
+<body>
+
+<h1>
+    WT Task Project
+</h1>
+
+<hr>
+<h3>Update Student assignment</h3>
+
+<form action = "/Update_Student/{{ student.id }}" method = "post">
+         <label for = "name">Full Name</label><br>
+         <input type = "text" name = "name" value = {{ student.name }} /><br>
+
+         <label for = "age">Age</label><br>
+         <input type = "date" name = "age" value = {{ student.age }} /><br>
+
+         <label for = "email">Email</label><br>
+         <input type = "email" name = "email" value = {{ student.email }} /><br>
+
+         <label for = "city">City</label><br>
+         <input type = "text" name = "city" value = {{ student.city }} /><br>
+
+         <label for = "addr">Address</label><br>
+         <input type = "text"  name = "addr" value = {{ student.address }} ></input><br>
+
+            <p>Course list :</p>
+    <select name="course">
+        {% for course in courses %}
+            <option value="{{course.id}}">{{course.cnumber }}</option>"
+        {% endfor %}
+    </select>
+    <tbody>
+            {% for course in student.courses %}
+               <tr>
+                  <td>">{{ course.cnumber }}</td>
+                  <td><a href= {{ url_for('delete', cidx = loop.index0, sid=student.id) }}>Delete</a></td>
+               </tr>
+            {% endfor %}
+         </tbody>
+    <br>
+
+         <input type = "submit" value = "Submit" />
+         <input type = "reset" value = "Reset" />
+</form>
+</body>
+</html>

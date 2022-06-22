@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WT Task Project</title>
+</head>
+<body>
+<h1>
+    WT Task Project
+</h1>
+
+<hr>
+
+<h3>Enroll Students to courses</h3>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form action = "{{ request.path }}" method = "post">
+<p>Student list :</p> <select name="student" >
+    {% for student in students %}
+        <option value="{{student.id }}">{{student.name }}</option>"
+    {% endfor %}
+</select>
+
+<p>Course list :</p> <select name="course">
+    {% for course in courses %}
+        <option value="{{course.id}}">{{course.cnumber }}</option>"
+    {% endfor %}
+</select> <br>
+
+<br>
+<input type = "submit" value = "Submit" />
+</form>
+</body>
+</html>
